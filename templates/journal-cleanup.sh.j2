@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Clean up systemd journal logs older than {{ journal_cleanup_max_age }}
+/usr/bin/journalctl --vacuum-time={{ journal_cleanup_max_age }}

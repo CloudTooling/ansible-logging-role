@@ -1,0 +1,28 @@
+name: Build
+on:
+  pull_request:
+  merge_group:
+  push:
+    branches:
+      - develop
+defaults:
+  run:
+    working-directory: "CloudTooling.logging"
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the codebase.
+        uses: actions/checkout@v4
+        with:
+          path: "CloudTooling.logging"
+      - name: Set up Python 3.
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Install test dependencies.
+        run: pip3 install yamllint
+      - name: Lint code.
+        run: |-
+          yamllint .

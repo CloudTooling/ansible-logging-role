@@ -1,0 +1,17 @@
+---
+# To draft release notes those rules are applied:
+changelog:
+  categories:
+    - title: Exiting new Features 🚀
+      labels:
+        - enhancement
+    - title: Fixed security issues 🔒
+      labels:
+        - security
+    - title: Fixed Bugs 🐞
+      labels:
+        - bug
+    - title: Other Changes 🛠
+      labels:
+        - documentation
+        - "*"

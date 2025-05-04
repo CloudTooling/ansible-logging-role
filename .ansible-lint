@@ -1,0 +1,7 @@
+
+---
+skip_list:
+  - role-name
+  - empty-lines
+  - fqcn-builtins
+  - package-latest

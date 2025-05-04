@@ -1,0 +1,16 @@
+---
+- name: Create journal cleanup script
+  template:
+    src: journal-cleanup.sh.j2
+    dest: "{{ journal_cleanup_script_path }}"
+    mode: "0755"
+    owner: root
+    group: root
+
+- name: Set up cron job for journal cleanup
+  cron:
+    name: "Journal log cleanup"
+    minute: "{{ journal_cleanup_cron_minute }}"
+    hour: "{{ journal_cleanup_cron_hour }}"
+    user: root
+    job: "{{ journal_cleanup_script_path }}"

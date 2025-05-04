@@ -1,0 +1,6 @@
+---
+# Default values for cleanup
+journal_cleanup_max_age: "7days"  # Age of logs to keep
+journal_cleanup_script_path: "/usr/local/bin/journal-cleanup.sh"
+journal_cleanup_cron_minute: "0"
+journal_cleanup_cron_hour: "3"
