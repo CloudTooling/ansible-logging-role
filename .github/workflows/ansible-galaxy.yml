@@ -1,0 +1,17 @@
+name: Release Role to Ansible Galaxy
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Ansible Galaxy Import
+        run: |
+          curl -X POST "https://galaxy.ansible.com/api/v1/imports/" \
+            -H "Authorization: Token ${{ secrets.ANSIBLE_GALAXY_API_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d "{\"repository\": \"https://github.com/cloudtooling/logging\"}"
