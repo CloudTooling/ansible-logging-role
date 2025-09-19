@@ -57,4 +57,5 @@ galaxy_info:
     - web
     - systemd
 
-dependencies: []
+dependencies:
+    - "community.general": ">=10.0.0"
