@@ -1,5 +1,6 @@
-# ansible-logging-role
-[![Build](https://github.com/CloudTooling/ansible-role-logging/actions/workflows/workflow.yml/badge.svg)](https://github.com/CloudTooling/ansible-role-logging/actions/workflows/workflow.yml)
+# Ansible role for logging
+
+[![Build](https://github.com/CloudTooling/ansible-logging-role/actions/workflows/workflow.yml/badge.svg)](https://github.com/CloudTooling/ansible-logging-role/actions/workflows/workflow.yml)
 [![Ansible Role](https://img.shields.io/ansible/role/d/cloudtooling/logging)](https://galaxy.ansible.com/ui/standalone/roles/cloudtooling/logging/)
 
 Easy deployment of logging app on Linux
